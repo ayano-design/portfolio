@@ -13,6 +13,59 @@
   <link rel="stylesheet" href="css/ress.min.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="images/favicon.ico" />
+
+<style>
+    
+    .core-values {
+      margin-top: 60px;
+    }
+    .core-values-ttl {
+      text-align: center;
+      font-size: 1.8rem; 
+      margin-bottom: 40px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .core-values-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      list-style: none;
+    }
+    .core-values-item {
+      background: #ffffff;
+      padding: 30px 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border: 1px solid #f0f0f0;
+    }
+    .core-values-item h4 {
+      font-size: 1.25rem; 
+      color: #445566;
+      margin-bottom: 15px;
+      font-weight: 700;
+      line-height: 1.5;
+      border-bottom: 3px solid #FEFF86;
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+    .core-values-item p {
+      font-size: 1.1rem; 
+      line-height: 1.8;
+      color: #333333;
+    }
+    @media (max-width: 768px) {
+      .core-values-list {
+        grid-template-columns: 1fr; 
+      }
+      .core-values-ttl {
+        font-size: 1.5rem; 
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+
+
 </head>
 
 <body>
@@ -132,7 +185,7 @@
             <tr>
               <th>略歴</th>
               <td class="values-text">
-                京都女子大学を卒業後、医療事務、建築積算、CADオペレーション、一般事務、AIアノテーションなど
+                大学を卒業後、医療事務、建築積算、CADオペレーション、一般事務、AIアノテーションなど
                 多様な職種を経験しました。<br>社会人としてさまざまな環境で働く中で、情報や状況を整理し、
                 相手に伝わる形に整えることに自然とやりがいを感じるようになります。<br />
                 現在はその感覚を活かし、WEBデザインと動画制作を学びながら、
@@ -141,6 +194,25 @@
             </tr>
           </table>
         </div>
+
+<div class="core-values">
+          <h3 class="core-values-ttl">大切にしている価値観</h3>
+          <ul class="core-values-list">
+            <li class="core-values-item">
+              <h4>1. 安心と自由を、<br>自分の力で設計すること</h4>
+              <p>感情や状況に振り回されるのではなく、選択できる余白を持ち続けたい。<br>経済面・働き方・人間関係においても、「いつでも選べる状態」をつくることを大切にしています。</p>
+            </li>
+            <li class="core-values-item">
+              <h4>2. 調和を大切にすること</h4>
+              <p>自分の意志を持ちながらも、相手の立場に立つことを忘れない。<br>利己心と利他心、自由とつながりのバランスを取りながら、心地よい関係を築くことを目指しています。</p>
+            </li>
+            <li class="core-values-item">
+              <h4>3. 無理なく、長く続けられる<br>かたちを選ぶこと</h4>
+              <p>短期的な成果よりも、持続できる仕組みを。<br>健康も学びも仕事も「一生続くプロジェクト」と捉え、整えながら前に進む姿勢を大切にしています。</p>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </section>
 
