@@ -1,0 +1,1170 @@
+@charset "UTF-8";
+
+/* ===================================================
+   ベース設定（余白・行間・文字間は洗練されたまま、色は元に）
+   =================================================== */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #445566;
+  /* 元の文字色 */
+  background-color: #DAF5FF;
+  /* 元のベースカラー */
+  line-height: 1.8;
+  /* ゆとりのある行間 */
+  letter-spacing: 0.08em;
+  /* わずかに開けた文字間 */
+}
+
+h1,
+h2,
+h3,
+.logo,
+.section-ttl {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #B0DAFF;
+  /* 元のアクセントカラー */
+}
+
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+  /* 左右の余白広め */
+}
+
+.flexB {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* 画像の角を少し丸めて引き締める */
+.radius-img {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+/* ===================================================
+   Header
+   =================================================== */
+header {
+  background: #B0DAFF;
+  /* 元のヘッダー色 */
+  color: #445566;
+  padding: 2.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+header .inner.flexB {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0;
+  line-height: 1.5;
+  z-index: 200;
+}
+
+header nav ul {
+  display: flex;
+  gap: 3.5rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+header nav ul li {
+  list-style: none;
+  line-height: 1.5;
+}
+
+/* ハンバーガーボタン */
+.hamburger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #445566;
+  /* 元の色 */
+  transition: all 0.3s;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 11px;
+}
+
+.hamburger span:nth-child(3) {
+  bottom: 0;
+}
+
+.hamburger.is-active span:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-active span:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+/* ===================================================
+   Main Visual
+   =================================================== */
+.mv {
+  width: 100%;
+  height: 70vh;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mv img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mv__ttl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.mv__ttl span {
+  display: block;
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  font-weight: 400;
+}
+
+/* ===================================================
+   共通 Section Title
+   =================================================== */
+.section-ttl {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  color: #445566;
+  /* 元の色 */
+  margin-bottom: 8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.section-ttl span {
+  display: block;
+  font-size: 1.4rem;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #667788;
+  /* 元の色 */
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+.section-ttl span::before {
+  content: "";
+  display: block;
+  width: 40px;
+  border-bottom: 3px solid #FEFF86;
+  /* 元の黄色ライン */
+  margin: 0 auto 1.5rem;
+}
+
+/* ===================================================
+   Profile Section
+   =================================================== */
+.profile {
+  padding: 12rem 0;
+  /* 14remから元のサイズに戻しました */
+  background: #DAF5FF;
+}
+
+.profile-content {
+  align-items: center;
+}
+
+.profile-img-box {
+  width: 38%;
+}
+
+.profile-img-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.profile-txt-box {
+  width: 55%;
+}
+
+.profile-txt {
+  line-height: 2.2;
+}
+
+/* ===================================================
+   Features Section
+   =================================================== */
+.features {
+  padding: 80px 0;
+  /* 元のサイズに戻しました */
+  background: #B9E9FC;
+}
+
+.features li {
+  width: 31%;
+  background: #fff;
+  padding-bottom: 4rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(176, 218, 255, 0.3);
+  overflow: hidden;
+  list-style: none;
+  text-align: center;
+}
+
+.features li img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 3rem;
+  border-radius: 16px 16px 0 0;
+  box-shadow: none;
+}
+
+.features li h3,
+.features li p {
+  text-align: left;
+  padding: 0 3rem;
+}
+
+.features li h3 {
+  font-size: 1.4rem;
+  color: #445566;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  border-bottom: 2px solid #FEFF86;
+  /* 元の黄色下線 */
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.features li p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+/* ===================================================
+   Values Section
+   =================================================== */
+.values {
+  background: #fff;
+  padding-top: 0;
+  /* ←ここが原因でした！上部の白い隙間を消します */
+  padding-bottom: 10rem;
+}
+
+.values__ttl {
+  background: #FEFF86;
+  padding: 6rem 0;
+  margin-bottom: 6rem;
+}
+
+.values__ttl .section-ttl {
+  margin-bottom: 0;
+}
+
+.values__ttl .section-ttl span::before {
+  border-color: #445566;
+  /* 元の設定 */
+}
+
+.values .inner {
+  padding-top: 2rem;
+}
+
+.values table {
+  width: 60%;
+  border-collapse: collapse;
+}
+
+.values table th {
+  width: 20%;
+  text-align: left;
+  vertical-align: top;
+  padding: 3rem 0;
+  color: #445566;
+  font-weight: 700;
+  border-bottom: 1px solid #B0DAFF;
+  /* 元の線色 */
+}
+
+.values table td {
+  padding: 3rem 0;
+  border-bottom: 1px solid #B0DAFF;
+  line-height: 2;
+}
+
+.profile-img {
+  width: 35%;
+}
+
+.profile-img img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #B0DAFF;
+  /* 元の枠線 */
+  border-radius: 12px;
+  background: #fff;
+  display: block;
+}
+
+/* ===================================================
+   Skill Section
+   =================================================== */
+.skill {
+  padding: 10rem 0;
+  background: #fff;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6rem 4rem;
+}
+
+.skill-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.skill-icon {
+  width: 55px;
+  flex-shrink: 0;
+}
+
+.skill-icon img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.skill-info h3 {
+  font-family: 'Montserrat', "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #445566;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.skill-info p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #667788;
+}
+
+/* ===================================================
+   Works Section
+   =================================================== */
+.works {
+  padding: 10rem 0;
+  background: #B9E9FC;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 4rem;
+}
+
+.works-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(176, 218, 255, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.works-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(176, 218, 255, 0.5);
+}
+
+.works-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.works-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.works-item:hover .works-img img {
+  transform: scale(1.05);
+}
+
+.works-info {
+  padding: 2.5rem 2rem;
+}
+
+.works-info h3 {
+  font-size: 1.6rem;
+  color: #445566;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.works-info p {
+  font-size: 1.2rem;
+  color: #667788;
+  font-family: 'Montserrat', "Noto Sans JP", sans-serif;
+}
+
+/* ===================================================
+   Modal
+   =================================================== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  border-radius: 16px;
+  overflow-y: auto;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(20px);
+  transition: transform 0.3s;
+}
+
+.modal.is-active .modal-content {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background: #445566;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 2.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.modal-close:hover {
+  background: #B0DAFF;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-media {
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.modal-media img {
+  width: 100%;
+  height: auto;
+  max-height: 50vh;
+  object-fit: contain;
+  display: block;
+}
+
+.modal-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  display: none;
+}
+
+.modal-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-text {
+  padding: 4rem;
+}
+
+.modal-text h3 {
+  font-size: 2.2rem;
+  color: #445566;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #FEFF86;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.modal-text p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #445566;
+}
+
+/* ===================================================
+   Vision Section
+   =================================================== */
+.contact-page {
+  padding: 12rem 0 15rem;
+  background: #DAF5FF;
+  /* 元の背景 */
+}
+
+.contact-page__content {
+  align-items: center;
+}
+
+.contact-page__img-box {
+  width: 38%;
+}
+
+.contact-page__img-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+}
+
+.contact-page__txt-box {
+  width: 55%;
+}
+
+.contact-page__read-txt {
+  line-height: 2.2;
+  text-align: left;
+}
+
+/* ===================================================
+   Footer
+   =================================================== */
+footer {
+  background: #B0DAFF;
+  /* 元のフッター */
+  color: #445566;
+  padding: 5rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+/* ===================================================
+   Responsive
+   =================================================== */
+@media (max-width: 768px) {
+  .inner {
+    padding: 0 20px;
+  }
+
+  .section-ttl {
+    font-size: 3.2rem;
+    margin-bottom: 5rem;
+  }
+
+  .pc-only {
+    display: none;
+  }
+
+  header .inner.flexB {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(176, 218, 255, 0.98);
+    /* 元のスマホメニュー背景 */
+    transition: all 0.4s ease;
+    z-index: 150;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header nav.is-active {
+    right: 0;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 4rem !important;
+  }
+
+  header nav ul li {
+    font-size: 1.8rem;
+  }
+
+  .mv {
+    height: 50vh;
+    min-height: 400px;
+  }
+
+  .mv__ttl {
+    font-size: 3rem;
+  }
+
+  .features li {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .features li img {
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+
+  .values table {
+    width: 100%;
+  }
+
+  .values table th,
+  .values table td {
+    display: block;
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+
+  .values table th {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .profile-img {
+    margin-bottom: 4rem;
+    width: 100%;
+  }
+
+  .profile-img img {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .profile-content {
+    flex-direction: column;
+  }
+
+  .profile-img-box {
+    width: 80%;
+    margin: 0 auto 4rem;
+  }
+
+  .profile-txt-box {
+    width: 100%;
+  }
+
+  .profile-txt {
+    text-align: left;
+  }
+
+  .skill-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .works-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .modal-text {
+    padding: 3rem 2rem;
+  }
+
+  .modal-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .contact-page__content {
+    flex-direction: column;
+  }
+
+  .contact-page__img-box {
+    width: 80%;
+    margin: 0 auto 4rem;
+  }
+
+  .contact-page__txt-box {
+    width: 100%;
+  }
+
+
+}
+
+/* ===================================================
+   Work Detail Page (制作実績 詳細ページ用)
+   =================================================== */
+.work-detail {
+  padding: 8rem 0 12rem;
+  background: #fff;
+}
+
+.work-detail__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.work-detail__header .category {
+  font-family: 'Montserrat', sans-serif;
+  color: #667788;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.work-detail__header .title {
+  font-size: 3.2rem;
+  color: #445566;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.work-detail__mv {
+  margin-bottom: 8rem;
+}
+
+.work-detail__mv img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(176, 218, 255, 0.4);
+}
+
+.work-detail__overview {
+  margin-bottom: 10rem;
+  align-items: flex-start;
+  gap: 6rem;
+}
+
+.overview-text {
+  width: 55%;
+}
+
+.overview-meta {
+  width: 40%;
+  background: #DAF5FF;
+  padding: 4rem;
+  border-radius: 16px;
+}
+
+.work-detail h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #445566;
+  font-family: 'Montserrat', "Noto Sans JP", sans-serif;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid #FEFF86;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.work-detail h2 span {
+  font-size: 1.3rem;
+  color: #667788;
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+
+.overview-text p {
+  line-height: 2;
+  margin-bottom: 4rem;
+}
+
+.site-link-btn {
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  background: #445566;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  letter-spacing: 0.1em;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-link-btn:hover {
+  background: #B0DAFF;
+  color: #445566;
+  transform: translateY(-2px);
+}
+
+.overview-meta dl {
+  width: 100%;
+}
+
+.overview-meta dt {
+  font-weight: 700;
+  color: #445566;
+  border-bottom: 1px dashed #B0DAFF;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.overview-meta dd {
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  white-space: normal;
+}
+
+.overview-meta dd:last-child {
+  margin-bottom: 0;
+}
+
+.work-detail__concept {
+  margin-bottom: 6rem;
+}
+
+.work-detail__concept>p {
+  margin-bottom: 5rem;
+  line-height: 2;
+}
+
+/* ===================================================
+   プレゼンテーション表示エリア
+   =================================================== */
+.work-detail__presentation {
+  margin-bottom: 10rem;
+  text-align: center;
+}
+
+.pdf-modal-frame {
+  width: 100%;
+  max-width: 960px;
+  margin: 4rem auto 2rem;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e0e0e0;
+}
+
+.pdf-modal-header {
+  background: #f5f5f5;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.pdf-modal-header .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff5f56;
+  margin-right: 8px;
+}
+
+.pdf-modal-header .dot:nth-child(2) {
+  background: #ffbd2e;
+}
+
+.pdf-modal-header .dot:nth-child(3) {
+  background: #27c93f;
+}
+
+.pdf-modal-header .pdf-title {
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #888;
+  padding-right: 60px;
+}
+
+.pdf-body {
+  width: 100%;
+  height: 60vh;
+  min-height: 450px;
+  background: #333;
+}
+
+/* ドライブリンクボタン */
+.presentation-link-wrap {
+  margin-top: 2rem;
+}
+
+.small-text {
+  font-size: 1.2rem;
+  color: #667788;
+  margin-bottom: 1rem;
+}
+
+.drive-btn {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  border: 2px solid #445566;
+  color: #445566;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.drive-btn:hover {
+  background: #445566;
+  color: #fff;
+}
+
+/* ===================================================
+   全体のデザイン（文章を上、画像を下に配置）
+   =================================================== */
+.work-detail__fullpage {
+  margin-bottom: 8rem;
+  text-align: center;
+}
+
+.work-detail__fullpage h2 {
+  margin-bottom: 4rem;
+}
+
+/* デザインコンセプト（ポイント）の文章：担当範囲と同じスタイル */
+.concept-text {
+  max-width: 800px;
+  /* 読みやすい幅に制限 */
+  margin: 0 auto 5rem;
+  /* 下の画像との間に余白を確保 */
+  text-align: left;
+  /* 担当範囲と同じように左揃えへ変更 */
+}
+
+.concept-text dl {
+  width: 100%;
+}
+
+.concept-text dt {
+  font-weight: 700;
+  color: #445566;
+  border-bottom: 1px dashed #B0DAFF;
+  /* 担当範囲と同じ水色の点線 */
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  /* ベースの文字サイズ（担当範囲と同じ大きさ） */
+  font-family: 'Montserrat', "Noto Sans JP", sans-serif;
+}
+
+.concept-text dd {
+  line-height: 1.8;
+  color: #445566;
+  white-space: normal;
+  /* 改行を許可 */
+}
+
+/* 画像エリアの設定（PCサイズ抑制・余白広め） */
+.fullpage-img-wrap.flex-half {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  background: transparent;
+  padding: 0;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.fullpage-img-wrap.flex-half .img-box {
+  width: 42%;
+}
+
+.fullpage-img-wrap.flex-half .img-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(176, 218, 255, 0.4);
+}
+
+/* ===================================================
+   戻るボタン
+   =================================================== */
+.work-detail__back {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.back-btn {
+  display: inline-block;
+  color: #445566;
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  color: #B0DAFF;
+  border-bottom: 2px solid #B0DAFF;
+}
+
+/* ===================================================
+   Responsive (Work Detail) スマホ用調整
+   =================================================== */
+@media (max-width: 768px) {
+  .work-detail {
+    padding: 4rem 0 8rem;
+  }
+
+  .work-detail__header .title {
+    font-size: 2.4rem;
+  }
+
+  /* 概要と青い枠を縦並びにして、横幅を100%に広げる */
+  .work-detail__overview {
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+  }
+
+  .overview-text,
+  .overview-meta {
+    width: 100%;
+  }
+
+  /* 青い枠の内側の余白をスマホに合わせて少し狭め、文字幅を確保する */
+  .overview-meta {
+    padding: 3rem 2rem;
+  }
+
+  .pdf-body {
+    height: 45vh;
+    min-height: 300px;
+  }
+
+  .pdf-modal-header .pdf-title {
+    display: none;
+  }
+
+  .fullpage-img-wrap.flex-half {
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 100%;
+  }
+
+  .fullpage-img-wrap.flex-half .img-box {
+    width: 100%;
+  }
+
+  .concept-text {
+    padding: 0;
+  }
+}

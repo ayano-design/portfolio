@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>グランピング施設 Webサイト制作 | Ayano Nishikawa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../css/ress.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/favicon.ico" />
+</head>
+
+<body>
+  <header id="header">
+    <div class="inner flexB">
+      <p class="logo"><a href="../index.html">Ayano Nishikawa</a></p>
+
+      <button class="hamburger" id="js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="nav">
+        <ul>
+          <li><a href="../index.html#message">Message</a></li>
+          <li><a href="../index.html#features">Features</a></li>
+          <li><a href="../index.html#values">Values</a></li>
+          <li><a href="../index.html#skill">Skill</a></li>
+          <li><a href="../index.html#works">Works</a></li>
+          <li><a href="../index.html#vision">Vision</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="work-detail">
+      <div class="inner">
+        <div class="work-detail__header">
+          <p class="category">Web Design / Coding</p>
+          <h1 class="title">滋賀・琵琶湖のグランピング施設 Webサイト制作</h1>
+        </div>
+
+        <div class="work-detail__mv">
+          <img src="../images/top.webp" alt="グランピング施設 メインビジュアル" class="radius-img" loading="lazy">
+        </div>
+
+        <div class="work-detail__overview flexB">
+          <div class="overview-text">
+            <h2>Overview<span>プロジェクト概要</span></h2>
+            <p>
+              自然豊かな滋賀・琵琶湖畔にある架空のグランピング施設の魅力を伝え、宿泊予約へ繋げるためのWebサイトです。<br>
+              チーム制作においてマネージャーとして進行管理を務めつつ、デザイン構成からコーディング補助、最終プレゼンテーション資料の作成まで幅広く担当いたしました。<br>
+              初めて施設を訪れるエンドユーザーが迷わず情報にたどり着けるよう、サイトマップの整理と見やすい導線設計にこだわっています。
+            </p>
+          </div>
+          <div class="overview-meta">
+            <dl>
+              <dt>担当範囲</dt>
+              <dd>
+                制作マネージャー（リーダー）として企画立案から進行管理までを担当<br>
+                画像生成AIを用いたカンプ・資料用ビジュアル制作<br>
+                Trelloを使用したタスク管理および作業の割り振り<br>
+                メンバーの進行管理および制作物の確認、担当講師への進捗共有
+              </dd>
+              <dt>使用ツール</dt>
+              <dd>Figma / Photoshop / HTML / CSS / Canva / Gemini / Nano Banana Pro</dd>
+            </dl>
+          </div>
+        </div>
+
+        <div class="work-detail__presentation">
+          <h2>Presentation<span>プレゼンテーション資料</span></h2>
+          <div class="pdf-modal-frame">
+            <div class="pdf-modal-header">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <p class="pdf-title">glamp_lake_presentation.pdf</p>
+            </div>
+            <div class="pdf-body">
+              <iframe src="https://drive.google.com/file/d/1f3f2X72qA6y71sxsONZCV22cWkfnT7dZ/preview" width="100%"
+                height="100%" allow="autoplay" style="border:0;"></iframe>
+            </div>
+          </div>
+          <div class="presentation-link-wrap">
+            <p class="small-text">※表示されない場合や全画面で見る場合は以下をクリックしてください</p>
+            <a href="https://drive.google.com/file/d/1f3f2X72qA6y71sxsONZCV22cWkfnT7dZ/view?usp=sharing" target="_blank"
+              class="drive-btn">
+              Googleドライブで資料を開く
+            </a>
+          </div>
+        </div>
+
+        <div class="work-detail__fullpage">
+          <h2>Full Page Design<span>全体のデザイン</span></h2>
+
+          <div class="concept-text">
+            <dl>
+              <dt>Design Concept / デザインのポイント</dt>
+              <dd>
+                「記憶に刻む、上質な湖畔のワンシーン」とし、全体を通して、アウトドアの土臭さを払拭し、少し都会的で洗練されたトーンを意識して仕上げました。
+              </dd>
+            </dl>
+          </div>
+
+          <div class="fullpage-img-wrap flex-half">
+            <div class="img-box">
+              <img src="../images/page1.webp" alt="ページデザイン1" loading="lazy">
+            </div>
+            <div class="img-box">
+              <img src="../images/page2.webp" alt="ページデザイン2" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="work-detail__back">
+          <a href="../index.html#works" class="back-btn">← Works一覧へ戻る</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="inner">
+      <small>&copy;2026 Ayano Nishikawa Portfolio.</small>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById("js-hamburger");
+    const nav = document.getElementById("nav");
+
+    hamburger.addEventListener("click", function () {
+      hamburger.classList.toggle("is-active");
+      nav.classList.toggle("is-active");
+    });
+  </script>
+</body>
+
+</html>
